@@ -1,0 +1,5 @@
+javac -cp .:junit-jupiter-api-5.7.0.jar: CalcInterestTest.java
+
+java compile command 
+mvn compile : pulled generated sources folder and maven status folders
+mvn test
