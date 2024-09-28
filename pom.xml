@@ -4,7 +4,6 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- Define groupId, artifactId, and version -->
     <groupId>com.example</groupId>
     <artifactId>calc-interest</artifactId>
     <version>1.0-SNAPSHOT</version>
@@ -32,12 +31,27 @@
             <artifactId>apiguardian-api</artifactId>
             <version>1.1.0</version>
         </dependency>
-
-        <!-- Add more dependencies here if needed -->
     </dependencies>
 
     <build>
+        <sourceDirectory>src/main/java</sourceDirectory>
+        <testSourceDirectory>src/test/java</testSourceDirectory>
+
         <plugins>
+            <!-- Maven Compiler Plugin to set the Java version and ensure compatibility -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>1.8</source> <!-- Ensure this matches your JDK installation -->
+                    <target>1.8</target> <!-- Ensure this matches your JDK installation -->
+                    <compilerArgs>
+                        <arg>-parameters</arg> <!-- Ensures that method parameter names are available to your test frameworks -->
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+
             <!-- Surefire plugin to run JUnit 5 tests -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -45,7 +59,7 @@
                 <version>2.22.2</version>
                 <configuration>
                     <includes>
-                        <include>**/CalcInterestTest.java</include>
+                        <include>**/*Test.java</include>
                     </includes>
                 </configuration>
             </plugin>

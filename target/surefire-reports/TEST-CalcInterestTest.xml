@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="CalcInterestTest" time="0.311" tests="17" errors="0" skipped="0" failures="4">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="CalcInterestTest" time="0.324" tests="16" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -19,7 +19,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-1.8\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\AVICHA~1\AppData\Local\Temp\surefire8773695833703884285\surefirebooter4519904081066512997.jar C:\Users\avichal avneel nath\AppData\Local\Temp\surefire8773695833703884285 2024-09-28T10-28-32_539-jvmRun1 surefire6698958190659798843tmp surefire_01253967793876410921tmp"/>
+    <property name="sun.java.command" value="C:\Users\AVICHA~1\AppData\Local\Temp\surefire5988134405218455468\surefirebooter263127696360802543.jar C:\Users\avichal avneel nath\AppData\Local\Temp\surefire5988134405218455468 2024-09-28T18-57-05_646-jvmRun1 surefire1847505053594040888tmp surefire_02319042943724121270tmp"/>
     <property name="surefire.test.class.path" value="C:\Users\avichal avneel nath\Desktop\Semester 6\CS341_A1_Codes\target\test-classes;C:\Users\avichal avneel nath\Desktop\Semester 6\CS341_A1_Codes\target\classes;C:\Users\avichal avneel nath\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.1\junit-jupiter-api-5.8.1.jar;C:\Users\avichal avneel nath\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\avichal avneel nath\.m2\repository\org\junit\platform\junit-platform-commons\1.8.1\junit-platform-commons-1.8.1.jar;C:\Users\avichal avneel nath\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.1\junit-jupiter-engine-5.8.1.jar;C:\Users\avichal avneel nath\.m2\repository\org\junit\platform\junit-platform-engine\1.8.1\junit-platform-engine-1.8.1.jar;C:\Users\avichal avneel nath\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\avichal avneel nath"/>
@@ -32,7 +32,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\AVICHA~1\AppData\Local\Temp\surefire8773695833703884285\surefirebooter4519904081066512997.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\AVICHA~1\AppData\Local\Temp\surefire5988134405218455468\surefirebooter263127696360802543.jar"/>
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk-1.8\jre\lib\resources.jar;C:\Program Files\Java\jdk-1.8\jre\lib\rt.jar;C:\Program Files\Java\jdk-1.8\jre\lib\jsse.jar;C:\Program Files\Java\jdk-1.8\jre\lib\jce.jar;C:\Program Files\Java\jdk-1.8\jre\lib\charsets.jar;C:\Program Files\Java\jdk-1.8\jre\lib\jfr.jar;C:\Program Files\Java\jdk-1.8\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -62,37 +62,20 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="testPropertyLoanCase_TC_PB1" classname="CalcInterestTest" time="0.095"/>
-  <testcase name="testPropertyLoanCase_TC_PB2" classname="CalcInterestTest" time="0.002"/>
-  <testcase name="testPropertyLoanCase_TC_PB3" classname="CalcInterestTest" time="0.04">
-    <failure message="expected: &lt;382499.15&gt; but was: &lt;382499.235&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <382499.15> but was: <382499.235>
-	at CalcInterestTest.testPropertyLoanCase_TC_PB3(CalcInterestTest.java:45)
-]]></failure>
-  </testcase>
+  <testcase name="testPropertyLoanCase_TC_PB1" classname="CalcInterestTest" time="0.135"/>
+  <testcase name="testPropertyLoanCase_TC_PB2" classname="CalcInterestTest" time="0"/>
+  <testcase name="testPropertyLoanCase_TC_PB3" classname="CalcInterestTest" time="0"/>
   <testcase name="testPropertyLoanCase_TC_PB4" classname="CalcInterestTest" time="0"/>
-  <testcase name="testNegativeYearLoan_TC_E3" classname="CalcInterestTest" time="0"/>
-  <testcase name="testUnrealisticYearLoan_TC_E4" classname="CalcInterestTest" time="0"/>
-  <testcase name="testInvalidLoanType_TC_E1" classname="CalcInterestTest" time="0.003"/>
-  <testcase name="testAdditionalHomeLoan_TC_H1" classname="CalcInterestTest" time="0.007"/>
-  <testcase name="testAdditionalHomeLoan_TC_H2" classname="CalcInterestTest" time="0"/>
-  <testcase name="testAdditionalHomeLoan_TC_H3" classname="CalcInterestTest" time="0.001"/>
-  <testcase name="testHomeLoanCase_TC_HB1" classname="CalcInterestTest" time="0.011">
-    <failure message="expected: &lt;19999.8&gt; but was: &lt;39999.6&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <19999.8> but was: <39999.6>
-	at CalcInterestTest.testHomeLoanCase_TC_HB1(CalcInterestTest.java:9)
-]]></failure>
-  </testcase>
-  <testcase name="testHomeLoanCase_TC_HB2" classname="CalcInterestTest" time="0.002"/>
-  <testcase name="testHomeLoanCase_TC_HB3" classname="CalcInterestTest" time="0.004"/>
-  <testcase name="testHomeLoanCase_TC_HB4" classname="CalcInterestTest" time="0.004">
-    <failure message="expected: &lt;11500.0&gt; but was: &lt;20000.0&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <11500.0> but was: <20000.0>
-	at CalcInterestTest.testHomeLoanCase_TC_HB4(CalcInterestTest.java:24)
-]]></failure>
-  </testcase>
-  <testcase name="testHomeLoanCase_TC_HB5" classname="CalcInterestTest" time="0.006">
-    <failure message="expected: &lt;231000.0&gt; but was: &lt;0.0&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <231000.0> but was: <0.0>
-	at CalcInterestTest.testHomeLoanCase_TC_HB5(CalcInterestTest.java:29)
-]]></failure>
-  </testcase>
+  <testcase name="testPropertyLoanCase_TC_PB5" classname="CalcInterestTest" time="0"/>
+  <testcase name="testInvalidLoanTypeZero_TC_E6" classname="CalcInterestTest" time="0.002"/>
+  <testcase name="testNegativeYearLoan_TC_E3" classname="CalcInterestTest" time="0.002"/>
+  <testcase name="testUnrealisticYearLoan_TC_E4" classname="CalcInterestTest" time="0.03"/>
+  <testcase name="testInvalidLoanType_TC_E1" classname="CalcInterestTest" time="0"/>
+  <testcase name="testHomeLoanCase_TC_HB1" classname="CalcInterestTest" time="0.001"/>
+  <testcase name="testHomeLoanCase_TC_HB2" classname="CalcInterestTest" time="0"/>
+  <testcase name="testHomeLoanCase_TC_HB3" classname="CalcInterestTest" time="0.002"/>
+  <testcase name="testHomeLoanCase_TC_HB4" classname="CalcInterestTest" time="0"/>
+  <testcase name="testHomeLoanCase_TC_HB5" classname="CalcInterestTest" time="0.001"/>
   <testcase name="testYearLoanZero_TC_E5" classname="CalcInterestTest" time="0.002"/>
-  <testcase name="testNegativeLoanAmount_TC_E2" classname="CalcInterestTest" time="0.001"/>
+  <testcase name="testNegativeLoanAmount_TC_E2" classname="CalcInterestTest" time="0.004"/>
 </testsuite>
