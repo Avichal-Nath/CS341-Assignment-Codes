@@ -1,6 +1,6 @@
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
-
+// Automated Task Q1 Task 3
 public class CalcInterestTest {
 
     // Home Loan Test Cases

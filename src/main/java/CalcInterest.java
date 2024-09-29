@@ -1,31 +1,7 @@
 import java.util.Scanner;
-
+// Q1 Main Program 
+// method implementation with allowing user to enter there paramters and get interest calculated.
 public class CalcInterest {
-
-    public static void main(String[] args) {
-        // Collect user input
-        try ( // Create a Scanner object to read user input
-                Scanner scanner = new Scanner(System.in)) {
-            // Collect user input
-            System.out.print("Enter loan type (1 for Home, 2 for Property): ");
-            int loanType = scanner.nextInt();
-            System.out.print("Enter loan amount: ");
-            double loanAmount = scanner.nextDouble();
-            System.out.print("Enter loan duration in years: ");
-            int yearLoan = scanner.nextInt();
-            // Compute the interest
-            double interest = computeLoanInterest(loanAmount, yearLoan, loanType);
-            double interestRate = determineInterestRate(loanAmount, yearLoan, loanType);
-            // Output the result
-            if (interest == -1 || interestRate == -1) {
-                System.out.println("Error: Invalid input. Please check your loan amount, duration, or type.");
-            } else {
-                System.out.println("Interest Rate Used: " + (interestRate * 100) + "%");
-                System.out.println("Total Interest to be paid: $" + interest);
-            }
-            // Close the scanner
-        }
-    }
 
     public static double computeLoanInterest(double loanAmount, int yearLoan, int loanType) {
         if (loanAmount <= 0 || yearLoan <= 0 || yearLoan > 30 || (loanType != 1 && loanType != 2)) {
@@ -40,7 +16,7 @@ public class CalcInterest {
         return loanAmount * interestRate * yearLoan;  // Calculate simple interest
     }
 
-    public static double determineInterestRate(double loanAmount, int yearLoan, int loanType) {
+    private static double determineInterestRate(double loanAmount, int yearLoan, int loanType) {
         if (loanType == 1) {  // Home loan
             if (loanAmount < 100000) {
                 if (yearLoan <= 5) {
@@ -65,5 +41,43 @@ public class CalcInterest {
             }
         }
         return -1;  // Invalid loan type
+    }
+
+    public static void main(String[] args) {
+        try (Scanner scanner = new Scanner(System.in)) {
+            boolean continueLoop = true;
+
+            while (continueLoop) {
+                // Input section
+                System.out.println("Enter loan type (1 for Home, 2 for Property): ");
+                int loanType = scanner.nextInt();
+
+                System.out.println("Enter loan amount: ");
+                double loanAmount = scanner.nextDouble();
+
+                System.out.println("Enter loan year: ");
+                int yearLoan = scanner.nextInt();
+
+                // Process the interest rate and loan
+                double interest = computeLoanInterest(loanAmount, yearLoan, loanType);
+                double interestRate = determineInterestRate(loanAmount, yearLoan, loanType);
+
+                if (interest == -1) {
+                    System.out.println("Invalid input. Please check the loan type, amount, or year.");
+                } else {
+                    System.out.println("Interest rate used: " + (interestRate * 100) + "%");
+                    System.out.println("Total interest: $" + interest);
+                }
+
+                // Check if the user wants to continue
+                System.out.println("Do you want to calculate again? (yes/no): ");
+                String userResponse = scanner.next();
+
+                if (!userResponse.equalsIgnoreCase("yes")) {
+                    continueLoop = false;
+                }
+            }
+        }
+        System.out.println("Thank you for using the interest calculator!");
     }
 }
